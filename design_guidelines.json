@@ -1,0 +1,182 @@
+{
+  "project_name": "Daily OS",
+  "tagline": "Track the day. Build the life.",
+  "app_type": "dashboard",
+  "design_archetype": "Slate Minimal & Modern Personal OS",
+  "theme": "Light Theme (Calm, Minimal, Slate Accent, High Legibility)",
+  "color_palette": {
+    "theme_mode": "light",
+    "base_background": "#F8FAFC",
+    "card_background": "#FFFFFF",
+    "card_border": "#E2E8F0",
+    "card_border_hover": "#CBD5E1",
+    "typography": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#64748B",
+      "faint": "#94A3B8"
+    },
+    "slate_accent": {
+      "primary": "#2563EB",
+      "primary_hover": "#1D4ED8",
+      "soft_bg": "#EFF6FF",
+      "border_glow": "#BFDBFE",
+      "slate_dark": "#334155",
+      "slate_muted": "#475569"
+    },
+    "semantic_tags": {
+      "reading": { "bg": "#F0FDF4", "text": "#166534", "border": "#BBF7D0", "accent": "#22C55E" },
+      "writing": { "bg": "#EFF6FF", "text": "#1E40AF", "border": "#BFDBFE", "accent": "#3B82F6" },
+      "exercise": { "bg": "#FFF7ED", "text": "#C2410C", "border": "#FFEDD5", "accent": "#F97316" },
+      "learning": { "bg": "#F5F3FF", "text": "#6B21A8", "border": "#DDD6FE", "accent": "#A855F7" },
+      "journal": { "bg": "#FEF2F2", "text": "#991B1B", "border": "#FECACA", "accent": "#EF4444" },
+      "substack": { "bg": "#FAF5FF", "text": "#581C87", "border": "#E9D5FF", "accent": "#9333EA" }
+    },
+    "charts": {
+      "primary_series": "#2563EB",
+      "secondary_series": "#0284C7",
+      "tertiary_series": "#059669",
+      "quaternary_series": "#D97706",
+      "grid_line": "#F1F5F9",
+      "tooltip_bg": "#0F172A",
+      "tooltip_text": "#F8FAFC"
+    }
+  },
+  "typography": {
+    "heading_font": "'Outfit', 'Plus Jakarta Sans', sans-serif",
+    "body_font": "'DM Sans', 'Figtree', sans-serif",
+    "mono_font": "'JetBrains Mono', monospace",
+    "google_fonts_cdn": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap",
+    "scale": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight",
+      "h2_section": "text-xl sm:text-2xl font-semibold tracking-tight text-slate-900",
+      "h3_card": "text-base sm:text-lg font-medium text-slate-900 tracking-normal",
+      "subtitle": "text-sm sm:text-base text-slate-500 font-normal leading-relaxed",
+      "body": "text-sm sm:text-base text-slate-700 leading-relaxed font-normal",
+      "small_label": "text-xs font-semibold uppercase tracking-wider text-slate-500",
+      "metric_value": "text-2xl sm:text-3xl font-bold font-mono text-slate-900 tracking-tight"
+    }
+  },
+  "layout_and_navigation": {
+    "desktop_sidebar": {
+      "width": "w-64",
+      "bg": "bg-white border-r border-slate-200/80",
+      "style": "Fixed left navigation bar with brand header, quick daily status indicator, nav items with active accent indicator, and bottom user profile/settings summary."
+    },
+    "mobile_nav": {
+      "style": "Fixed bottom bar on mobile (`block md:hidden z-50 bg-white/95 backdrop-blur-md border-t border-slate-200`) with icon tabs + floating quick '+ Add Entry' action button."
+    },
+    "main_container": {
+      "padding": "px-4 sm:px-8 py-6 max-w-7xl mx-auto space-y-8",
+      "bg": "bg-slate-50 min-h-screen text-slate-900"
+    },
+    "grid_modes": {
+      "bento_dashboard": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-5 sm:gap-6",
+      "high_density_stats": "grid grid-cols-2 md:grid-cols-4 gap-4"
+    }
+  },
+  "page_specifications": {
+    "dashboard": {
+      "header": "Personalized Greeting ('Good morning / evening, [User]'), live date badge, Today's Completion Progress Bar + Circular Ring.",
+      "quick_action": "Prominent '+ Log Today's Entry' button in slate blue (#2563EB) opening the 3-minute quick logger.",
+      "widgets": [
+        "Today's Habits Check-grid (Reading, Writing, Workout, Learning, Journal, Substack)",
+        "Weekly Progress Bars & Streak Counters (Current streak vs Best streak)",
+        "Currently Reading Book Progress Widget",
+        "Recent Reflections & Notes Feed",
+        "Substack Article Pipeline Summary"
+      ]
+    },
+    "daily_entry": {
+      "ux_goal": "Complete total daily record in 3-5 minutes at night.",
+      "layout": "Accordion or clean tabbed multi-step form with progress feedback.",
+      "sections": [
+        "Reading (Book title, pages read, key takeaway)",
+        "Writing (Page/Word count target reached check, topic)",
+        "Exercise/Workout (Type, duration min, calories burned, body weight kg/lbs)",
+        "Learning (Topic/Skill, summary snippet)",
+        "Reflections (2 Good things, 1 Challenge/Lesson)",
+        "Morning Journal & Night Journal (Autosaving text fields)"
+      ]
+    },
+    "daily_review": {
+      "concept": "Daily snapshot archive view with clean card layout, completion badges, and word/page counter summaries."
+    },
+    "reading_tracker": {
+      "grid": "Grid of current reading books (with progress bars %) + completed bookshelf grid + 'Add Book' dialog.",
+      "features": "Status filter tags (Reading, Completed, Want to Read), star ratings, short book review cards."
+    },
+    "writing_workspace": {
+      "stats": "Daily goal tracker, writing streaks count, monthly total words.",
+      "editor": "Distraction-free clean rich markdown editor with daily target word counter & auto-save status."
+    },
+    "exercise_and_health": {
+      "charts": "Recharts interactive line & bar graphs for Weight over time, Calories burned, and Workout Duration.",
+      "quick_log": "Weight & calorie quick input card."
+    },
+    "learning_timeline": {
+      "visual": "Vertical timeline of learning milestones with date pills, topic tags, and lesson notes."
+    },
+    "journal": {
+      "structure": "Split view: Morning Journal (Intentions, Gratitude) and Night Journal (Reflection, Wins).",
+      "history": "Searchable previous journal logs by tag and date range."
+    },
+    "monitoring": {
+      "concept": "Custom metrics tracker (e.g., Water intake, Screen time, Sleep hrs, Caffeine).",
+      "widgets": "Custom metric setup cards + historical trend charts."
+    },
+    "substack_workspace": {
+      "kanban_board": "4 Column Drag & Drop Pipeline: IDEA → DRAFTING → REVISION → PUBLISHED.",
+      "editor": "Embedded drawer/modal for writing full Substack articles with target word counts and publication check."
+    },
+    "history": {
+      "calendar": "Monthly GitHub-style activity heat-map matrix showing habit completion states per day."
+    },
+    "settings": {
+      "configurations": "Habit target goals configuration, metric units (kg/lbs, km/miles), and JSON/CSV data export."
+    }
+  },
+  "component_styling_rules": {
+    "cards": "Use bg-white border border-slate-200 rounded-xl p-5 sm:p-6 hover:border-slate-300 transition-all shadow-sm shadow-slate-100",
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-4 py-2.5 transition-colors shadow-sm text-sm focus:ring-2 focus:ring-blue-500/20 active:scale-[0.98]",
+      "secondary": "bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium rounded-lg px-4 py-2.5 transition-colors text-sm",
+      "outline": "border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium rounded-lg px-4 py-2.5 transition-colors text-sm"
+    },
+    "inputs": "bg-white border border-slate-200 rounded-lg px-3.5 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all",
+    "modals_and_drawers": "Must use bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200 shadow-xl (NEVER fully transparent without blur)",
+    "toasts": "Use Sonner library with custom slate light styling."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "mappings": {
+      "dashboard": "LayoutDashboard",
+      "daily_entry": "CheckSquare",
+      "reading": "BookOpen",
+      "writing": "PenTool",
+      "exercise": "Dumbbell",
+      "learning": "GraduationCap",
+      "journal": "BookMarked",
+      "monitoring": "Activity",
+      "substack": "Kanban",
+      "history": "Calendar",
+      "settings": "Settings",
+      "quick_add": "Plus"
+    }
+  },
+  "testing_and_accessibility": {
+    "data_testid_rule": "ALL interactive components, submit buttons, nav links, status tags, habit checkboxes, inputs, and key metric displays MUST have explicit data-testid attributes in kebab-case (e.g. data-testid='quick-add-entry-btn', data-testid='nav-reading-tracker').",
+    "contrast_standard": "All text elements maintain WCAG AA minimum 4.5:1 contrast against light background (#F8FAFC / #FFFFFF).",
+    "code_format": "React code files must use standard .js / .jsx file extensions."
+  },
+  "instructions_to_main_agent": [
+    "Load Google Fonts link for Outfit, DM Sans, and JetBrains Mono in index.html.",
+    "Implement the full application with high fidelity, mock data for historical analytics, local storage persistence, and seamless modal dialogs.",
+    "Ensure the night entry form is streamlined for 3-5 minute completion.",
+    "Use Recharts for clean, responsive line & bar visualizations in Exercise and Custom Monitoring pages.",
+    "Always apply data-testid on all key interactive elements."
+  ]
+},
+  "overwrite": true,
+  "path": "/app/design_guidelines.json"
+}
